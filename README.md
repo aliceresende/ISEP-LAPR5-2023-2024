@@ -2,7 +2,7 @@
 
 # RobDroneGo Project Overview
 
-RobDroneGo is a prototype system designed to manage and execute tasks using a fleet of robots and drones within the ISEP campus. This project was developed as part of the LAPR5 course in the Computer Engineering program at ISEP. The project encompasses several modules:
+RobDroneGo is a prototype system designed to manage and execute tasks using a fleet of robots and drones within the ISEP campus. This project was developed as part of the LAPR5 class in the Computer Engineering course at ISEP. The project encompasses several modules:
 
 ## Modules
 - **Device Management**: Overseeing the robots and drones.
