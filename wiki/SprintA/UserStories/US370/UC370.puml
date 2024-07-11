@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+
+User -> (Como gestor de frota pretendo inibir um robot)
+
+
+@enduml

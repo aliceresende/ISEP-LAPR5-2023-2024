@@ -1,0 +1,26 @@
+<h1>Create Passages Form</h1>
+<form id="passage-form" #simpleForm="ngForm" (ngSubmit)="createPassage(simpleForm)">
+    <label for="passageBuilding1Id">Floor Building 1:</label>
+    <select id="passageBuilding1Id" [(ngModel)]="floorBuilding1" name="floorBuilding1">
+      <option *ngFor="let floor of floors" [value]="floor.id">{{floor.description}}</option>
+   </select>
+    <br>
+    
+    <label for="passageBuilding2Id">Floor Building 2:</label>
+    <select id="passageBuilding2Id" [(ngModel)]="floorBuilding2" name="floorBuilding2">
+      <option *ngFor="let floor of floors" [value]="floor.id">{{floor.description}}</option>
+   </select>
+    <br>
+    
+    <label for="direction">Location:</label>
+    <input type="text" id="direction" [(ngModel)]="location" name="location">
+    <br>
+    
+    <label for="passageCode">Passage Code:</label>
+    <input type="text" id="passageCode" [(ngModel)]="passageCode" name="passageCode">
+    <br>
+    <button type="submit" class="back-button">Create</button>
+    
+    <button (click)="goBack()" class="back-button" id="back">Go Back</button>
+  </form>
+  

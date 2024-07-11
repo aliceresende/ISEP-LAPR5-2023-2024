@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Actor User
+participant "<<System>> \n RobDroneGo" as sys
+activate User
+User -> sys: Listar todos os edificios
+activate sys
+sys--> User: retorna mensagem de sucesso
+deactivate sys
+@enduml

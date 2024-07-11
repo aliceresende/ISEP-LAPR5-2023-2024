@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+
+"Gestor de Frota" -> (Adiciona um novo robot à frota indicando o seu tipo, designação, etc.)
+
+
+@enduml

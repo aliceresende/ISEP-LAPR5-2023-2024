@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+
+User -> (Listar todos os pisos de um edifício)
+
+
+@enduml

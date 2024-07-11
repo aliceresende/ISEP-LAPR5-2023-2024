@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+
+User -> (Listar pisos de edifício com passagem para outros edifícios)
+
+
+@enduml

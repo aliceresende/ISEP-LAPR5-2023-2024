@@ -1,0 +1,126 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+hide field
+hide methods
+
+title Domain Driven Design
+
+skinparam linetype ortho
+rectangle "<<Aggregate>> Elevador" #B0C4DE{
+    entity Elevador <<Entity>><<Root>>
+}
+
+rectangle "<<Aggregate>> Edifício" #FF7F50{
+    entity Edifício <<Entity>><<Root>>
+    object Nome <<Value Object>>
+    object Descrição <<Value Object>>
+    object DimensãoPiso <<Value Object>>
+    object X <<Value Object>>
+    object Y <<Value Object>>
+    DimensãoPiso -down-> X
+    DimensãoPiso -down-> Y
+    Edifício --> Nome
+    Edifício --> Descrição
+    Edifício --> DimensãoPiso
+}
+
+rectangle "<<Aggregate>> Passagem" #DEB887{
+    entity Passagem<<Entity>><<Root>>
+}
+
+rectangle "<<Aggregate>> Piso" #D8BFD8{
+    entity Piso <<Entity>><<Root>>
+    object DescriçãoPiso <<Value Object>>
+    entity Sala <<Entity>>
+
+    object Categoria <<Value Object>>
+    object Descricao <<Value Object>>
+    object Mapa <<Value Object>>
+    object NomeSala <<Value Object>>
+
+    '- entity Passagem<<Entity>> -> Depende da info que for necessário armazenar
+    'dúvida na ligação entre o Piso e a Passagem'
+    Piso --> Sala
+    Piso --> DescriçãoPiso
+    Piso "1"-->"1" Mapa
+
+    Sala --> Categoria
+    Sala --> Descricao
+    Sala --> NomeSala
+
+}
+
+
+rectangle "<<Aggregate>> Robot" #B0E0E6{
+    entity Robot<<Entity>>
+    object Marca <<Value Object>>
+    object NúmeroSérie <<Value Object>>
+    object NickName <<Value Object>>
+    object Código <<Value Object>>
+    object Estado <<Value Object>>
+    object TipoRobot <<Value Object>>
+    Robot --> TipoRobot
+    Robot --> Marca
+    Robot -left-> NúmeroSérie
+    Robot -left-> NickName
+    Robot -left-> Código
+    Robot --> Estado
+}
+
+'---------------------------------
+
+rectangle "<<Aggregate>> Pedido de Tarefa" #B8BFD8{
+    entity PedidoTarefa <<Entity>><<Root>>
+
+}
+
+rectangle "<<Aggregate>> Tarefa" #B88FD3{
+    entity Tarefa <<Entity>><<Root>>
+    object IdTarefa <<Value Object>>
+
+    Tarefa --> IdTarefa
+}
+
+rectangle "<<Aggregate>> Tarefa de Vigilância" #abbbcc {
+    entity TarefaVigilância <<Entity>><<Root>>
+    object ContactoEmergencia <<Value Object>>
+    object SMS <<Value Object>>
+
+    TarefaVigilância --> ContactoEmergencia
+    TarefaVigilância --> SMS
+    TarefaVigilância --> Piso
+}
+
+rectangle "<<Aggregate>> Tarefa de Pick Up and Delivery" #abbbaa {
+    entity TarefaPickDeliver <<Entity>><<Root>>
+    object CódigoConfirmação
+    object NomePickUp
+    object NomeDeliver
+    object ContactoPickUp
+    object ContactoDeliver
+
+    TarefaPickDeliver --> CódigoConfirmação
+    TarefaPickDeliver --> NomePickUp
+    TarefaPickDeliver -up-> NomeDeliver
+    TarefaPickDeliver -left-> ContactoPickUp
+    TarefaPickDeliver -up-> ContactoDeliver
+    TarefaPickDeliver --> Piso
+
+}
+
+Edifício "1"<-up-"1..*"Piso: contém
+Elevador "0..1"-right->"1" Edifício: pertence a
+Piso "1"<-right-"0..1" Passagem
+Piso "1"<--"0..1"Elevador
+
+TarefaPickDeliver --up--|> Tarefa
+TarefaVigilância -up-|> Tarefa
+
+Tarefa <-- Robot
+Tarefa -->Piso
+
+PedidoTarefa <-down- Tarefa
+
+
+@enduml

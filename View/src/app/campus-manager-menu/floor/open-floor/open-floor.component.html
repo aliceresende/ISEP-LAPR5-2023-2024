@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="open-floor.component.css">
+    <title>Open and Load Buttons</title>
+</head>
+<body>
+
+    <div class="button-container">
+        <button (click)="openFloor()">Open</button>
+    </div>
+
+      <select id="selectedFloor" [(ngModel)]="selectedFloor" name="selectedFloor">
+      <option *ngFor="let floor of floors" [value]="floor.id">{{ floor.description }}</option>
+    </select>
+    <div class="button-container">
+      <button (click)="openFloor()">Open Automatic</button>
+    </div>
+
+    <select id="selectedFloor" [(ngModel)]="selectedAutomaticFloor" name="selectedAutomaticFloor">
+    <option *ngFor="let floor of floors" [value]="floor.id">{{ floor.description }}
+    
+    </option>
+   
+</select>
+</body>
+</html>

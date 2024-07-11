@@ -1,0 +1,32 @@
+<h1>Sequence of Tasks</h1>
+<form>
+    <div class="form-group">
+      <label for="robotSelect">Select Robot:</label>
+      <select id="robotSelect" class="form-control" (change)="onRobotSelect($event)">
+        <option value="" disabled selected>Select a Robot</option>
+        <option *ngFor="let robot of allRobots" [value]="robot.id">{{ robot.nickname }}</option>
+      </select>
+    </div>
+  </form>
+
+  <div *ngIf="taskPickDeliver.length > 0">
+    <h3>Pickup and Delivery Tasks</h3>
+    <ul>
+      <li *ngFor="let task of taskPickDeliver">
+        <!-- Display details of the task -->
+        <span>{{ task.userId }}</span>
+      </li>
+    </ul>
+  </div>
+  
+  <div *ngIf="taskVigilance.length > 0">
+    <h3>Vigilance Tasks</h3>
+    <ul>
+      <li *ngFor="let task of taskVigilance">
+        <!-- Display details of the task -->
+        <span>{{ task.userId }}</span>
+      </li>
+    </ul>
+  </div>
+  
+

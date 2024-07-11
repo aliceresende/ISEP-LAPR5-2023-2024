@@ -1,0 +1,20 @@
+<h1>Create Floor Form</h1>
+<form id="floors-form" #simpleForm="ngForm" (ngSubmit)="createFloor(simpleForm)">
+
+  <label for="floorNumberId">Floor Number:</label>
+  <input type="text" id="floorNumberId" [(ngModel)]="floorNumber" name="floorNumber" placeholder="Ex: 1, 2, ...">
+  <br>
+
+    <label for="descriptionId">Description:</label>
+    <input type="text" id="descriptionId" [(ngModel)]="description" name="description" placeholder="Ex: Building C - Floor 1">
+    <br>
+    
+    <label for="buildingId">Building:</label>
+    <select id="buildingId" [(ngModel)]="floorBuilding" name="floorBuilding">
+   <option *ngFor="let building of buildings" [value]="building.id">{{ building.name }}</option>
+</select>
+
+    <button type="submit" class="back-button">Create</button>
+    
+  </form>
+  

@@ -1,0 +1,25 @@
+<!-- list-floors.component.html -->
+<h1>List Buildings By Min Max</h1>
+<form id="floors-form" #simpleForm="ngForm">
+
+  <label for="min"> Min Value:</label>
+  <input type="text" id="min" [(ngModel)]="min" name="min" placeholder="Min Value" required>
+  <label for="max"> Max Value:</label>
+  <input type="text" id="max" [(ngModel)]="max" name="max" placeholder="Max Value" required>
+ 
+  
+  <ul class="floors">
+    <li *ngFor="let building of buildings">
+        <span><p><b>Code:</b> {{ building.code }}</p></span>
+        <span><p><b>Name:</b> {{ building.name }}</p></span>
+        <span><p><b>Description:</b> {{ building.description }}</p></span>
+        <span><p><b>X:</b> {{ building.x }}</p></span>
+        <span><p><b>Y:</b> {{ building.y }}</p></span>
+        <br>
+    </li>
+  </ul>
+  <button (click)="getMinMaxFloorBuildings(min,max)" class="add-button">Search</button>
+
+</form>
+  
+  

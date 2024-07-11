@@ -1,0 +1,16 @@
+{
+    "ai-test.endpoint": "",
+    "appService.defaultWebAppToDeploy": "/subscriptions/34fcfb7d-1459-43ed-84ea-e0ab2aa39085/resourceGroups/portugal/providers/Microsoft.Web/sites/robdronego-g63",
+    "appService.deploySubpath": "DeviceManagement",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "azureFunctions.deploySubpath": "api",
+    "azureFunctions.postDeployTask": "npm install (functions)",
+    "azureFunctions.projectLanguage": "TypeScript",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.projectLanguageModel": 4,
+    "azureFunctions.preDeployTask": "npm prune (functions)"
+}

@@ -1,0 +1,31 @@
+<h1>Users waiting to be accepted</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th>User email</th>
+        <th>First Name</th>
+        <th>Lastname</th>
+        <th>Phone Number</th>
+        <th>TaxPayer Number</th>
+        <th>Role</th>
+        <th>User status</th>
+        <th>Accept Request?</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usersList">
+        <td>{{user.email }}</td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.taxPayerNumber}}</td>
+        <td>{{user.role}}</td>
+        <td>{{user.state}}</td>
+        <td>
+          <button (click)="acceptUser(user.email)">Accept</button>
+          <button (click)="denyUser(user.email)">Deny</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

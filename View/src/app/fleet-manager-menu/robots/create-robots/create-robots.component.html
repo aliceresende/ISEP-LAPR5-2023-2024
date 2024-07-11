@@ -1,0 +1,43 @@
+  <!-- create-robots.component.html -->
+<h1>Create Robot Form</h1>
+  <div class="create-robots-container">
+
+    <form class="robot-form" #robotForm="ngForm" (ngSubmit)="createRobot(robotForm)">
+      <div class="form-group">
+        <label for="code">Code:</label>
+        <input type="text" id="code" name="code" [(ngModel)]="code" required>
+      </div>
+
+      <div class="form-group">
+        <label for="nickname">Nickname:</label>
+        <input type="text" id="nickname" name="nickname" [(ngModel)]="nickname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="seriesNumber">Series Number:</label>
+        <input type="text" id="seriesNumber" name="seriesNumber" [(ngModel)]="seriesNumber" required>
+      </div>
+
+      <label for="robotType">Robot Type</label>
+    <select id="robotType" [(ngModel)]="robotType" name="robotType">
+   <option *ngFor="let robot of robots" [value]="robot.id">{{robot.robotType}}</option>
+</select>
+  
+
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" [(ngModel)]="description" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <input type="checkbox" id="status" name="status" [(ngModel)]="status">
+      </div>
+
+      <button type="submit" [disabled]="robotForm.invalid">Create Robot</button>
+   
+    </form>
+
+
+    
+  </div>

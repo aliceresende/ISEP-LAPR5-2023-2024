@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:16.0
+    container_name: dbapi-container
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=dbapi
+    ports:
+      - 5432:5432
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+  pgadmin:
+    container_name: dbapi_pgadmin
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@park.pt
+      - PGADMIN_DEFAULT_PASSWORD=123
+    ports:
+      - "5050:80"

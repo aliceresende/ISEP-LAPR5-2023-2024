@@ -1,0 +1,78 @@
+<h1>Pick UP Delivery Task Request</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Starting Point</th>
+        <th>Ending Point</th>
+        <th>Name Pick</th>
+        <th>Name Deliver</th>
+        <th>Phone Pick</th>
+        <th>Phone Deliver</th>
+        <th>Code</th>
+        <th>Status</th>
+        <th>Accept Request?</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let taskP of taskPickDeliver">
+        <td>{{taskP.userId }}</td>
+        <td>{{filterIdToName(taskP.roomPick)}}</td>
+        <td>{{filterIdToName(taskP.roomDeliver)}}</td>
+        <td>{{taskP.namePick}}</td>
+        <td>{{taskP.nameDeliver}}</td>
+        <td>{{taskP.phoneNumberPick}}</td>
+        <td>{{taskP.phoneNumberDeliver}}</td>
+        <td>{{taskP.code}}</td>
+        <td>{{taskP.status}}</td>
+        <td>
+          <div *ngIf="taskP.status === 'WAITING'">
+            <select [(ngModel)]="taskP.robotAssignedTo">
+              <option value="" disabled selected>Select Robot</option>
+              <option *ngFor="let robotPD of robotPickDelivery" [value]="robotPD.id">{{ robotPD.nickname }}</option>
+            </select>
+          </div>
+          <button (click)="approveTask(taskP.id, taskP.robotAssignedTo, true)" [disabled]="!taskP.robotAssignedTo">Yes</button>
+          <button (click)="rejectTask(taskP.id, true)">No</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h1>Vigilance Task Request</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Starting Point</th>
+        <th>Ending Point</th>
+        <th>Msg</th>
+        <th>Phone Number</th>
+        <th>Status</th>   
+        <th>Accept Request?</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of taskVigilance">
+        <td>{{task.userId }}</td>
+        <td>{{filterIdToName(task.startingPoint)}}</td>
+        <td>{{filterIdToName(task.endingPoint)}}</td>
+        <td>{{task.message}}</td>
+        <td>{{task.phoneNumber}}</td>
+        <td>{{task.status}}</td>
+        <td>
+          <div *ngIf="task.status === 'WAITING'">
+            <select [(ngModel)]="task.robotAssignedTo">
+              <option value="" disabled selected>Select Robot</option>
+              <option *ngFor="let robotV of robotVigilance" [value]="robotV.id">{{ robotV.nickname }}</option>
+            </select>
+          </div>
+          <button (click)="approveTask(task.id, task.robotAssignedTo, false)" [disabled]="!task.robotAssignedTo">Yes</button>
+          <button (click)="rejectTask(task.id, false)">No</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="center-container">
+  </div>

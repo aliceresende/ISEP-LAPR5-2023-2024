@@ -1,0 +1,9 @@
+/* Aumenta o espaço interno dentro do modal */
+.mat-dialog-container {
+    padding: 20px; /* Ajuste este valor conforme necessário */
+  }
+  
+  /* Estilos adicionais para o conteúdo, se necessário */
+  .content {
+    margin: 40px 40px 40px;
+  }

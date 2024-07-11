@@ -1,0 +1,24 @@
+
+<div id="login-form-wrap">
+  <div class="icon">
+    <img src="../../../assets/user.png" alt="User Icon">
+  </div>
+  <form id="login-form"  #userForm="ngForm" (ngSubmit)="login(userForm)">
+    <p>
+    <input type="text" id="email" name="email" [(ngModel)]="email" placeholder="Email" required><i class="validation"><span></span><span></span></i>
+    </p>
+    <p>
+    <input type="password" id="password" name="password" [(ngModel)]="password" placeholder="Password" required><i class="validation"><span></span><span></span></i>
+    </p>
+    <p>
+    <input type="submit" id="login" value="Login">
+    </p>
+  </form>
+  <div id="create-account-wrap">
+    <p>To create an account click <a routerLink="/auth/signup">here</a><p>
+  </div>
+</div>
+
+
+  
+

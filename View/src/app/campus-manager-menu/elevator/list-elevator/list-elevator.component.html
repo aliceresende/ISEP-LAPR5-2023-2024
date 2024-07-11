@@ -1,0 +1,31 @@
+<!-- list-elevator.component.html -->
+<h1>List Elevators</h1>
+<form id="elevators-form" #simpleForm="ngForm">
+  <label for="buildingId">Select Building:</label>
+  <select id="buildingId" [(ngModel)]="buildingID" name="buildingID">
+    <option *ngFor="let building of buildings" [value]="building.id">{{ building.name }}</option>
+  </select>
+
+  <ul class="elevators">
+    <li *ngFor="let elevator of elevatorsList">
+      <span><b>Brand:</b> {{ elevator.brand }}</span> <br>
+      <span><b>Model:</b> {{ elevator.model }}<br></span><br>
+      <span><b>Series Number:</b>{{ elevator.seriesNumber }}</span><br>
+      <span><b>Description:</b>{{ elevator.description }}</span><br>
+
+      <ul>
+        <b>Floors:</b>
+        <li *ngFor="let floor of elevator.floors">
+         <!-- <span><b>Floor Number:</b> {{ floor. }}</span><br>
+          <span><b>Description:</b> {{ floor.description }}</span><br>
+          <span><b>Floor Building:</b> {{ floor.floorBuilding }}</span><br>-->
+          {{floor| json}}
+        </li>
+      </ul>
+      <br>
+    </li>
+  </ul>
+  <button (click)="getElevators(buildingID)" class="add-button">Search</button>
+</form>
+
+

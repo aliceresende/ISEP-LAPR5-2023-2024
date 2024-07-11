@@ -1,0 +1,33 @@
+<h1>Create Building Form</h1>
+<form [formGroup]="checkoutForm">
+  <div>
+    <label for="name">Building name:</label>
+    <input id="name" type="text" formControlName="name" #name>
+  </div>
+
+  <div>
+    <label for="code">Code:</label>
+    <input id="code" type="text" formControlName="code" #code>
+  </div>
+
+  <div>
+    <label for="description">Description:</label>
+    <input id="description" type="text" formControlName="description" #description>
+  </div>
+
+  <div>
+    <label for="x">X dimension:</label>
+    <input id="x" type="number" formControlName="x" #x>
+  </div>
+
+  <div>
+    <label for="y">Y dimension:</label>
+    <input id="y" type="number" formControlName="y" #y>
+  </div>
+
+  <button class="add-button" type="button" (click)="add(name.value, code.value, description.value, x.valueAsNumber, y.valueAsNumber);">
+    Create Building
+  </button>
+</form>
+
+  

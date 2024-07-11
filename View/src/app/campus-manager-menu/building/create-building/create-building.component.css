@@ -1,0 +1,85 @@
+/* Style for the body element */
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+select {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+select option {
+  background-color: #fff; /* Background color */
+  color: #333; /* Text color */
+  padding: 8px 12px; /* Padding around the text */
+  border-bottom: 1px solid #ccc; /* Bottom border for separation */
+}
+
+/* Style for the last option to remove the bottom border */
+select option:last-child {
+  border-bottom: none;
+}
+
+/* Hover effect for options */
+select option:hover {
+  background-color: #f0f0f0; /* Hover background color */
+}
+/* Style for the form container */
+form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Style for the form labels and input fields */
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+  background: linear-gradient(to bottom, #007BFF, #0056b3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Center the form on the page */
+h1 {
+  text-align: center;
+  margin-top: 240px;
+  color:#ffffff;
+  
+}
+/* Adjust margins for smaller screens */
+@media (max-width: 500px) {
+  form {
+      padding: 10px;
+  }
+}

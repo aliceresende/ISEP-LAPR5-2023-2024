@@ -1,0 +1,20 @@
+<h1>Update Floor Form</h1>
+<form id="floors-form" #simpleForm="ngForm" (ngSubmit)="updateFloor(simpleForm)">
+
+  <label for="floorId">Floor ID:</label>
+  <select id="floorId" [(ngModel)]="id" name="id">
+ <option *ngFor="let floor of floors" [value]="floor.id">{{ floor.description }}</option>
+</select>
+
+    <label for="floorNumberId">Floor Number:</label>
+    <input type="text" id="floorNumberId" [(ngModel)]="floorNumber" name="floorNumber"  placeholder="Ex: 1, 2, ..." >
+    <br>
+  
+      <label for="descriptionId">Description:</label>
+      <input type="text" id="descriptionId" [(ngModel)]="description" name="description" placeholder="Ex: Building C - Floor 1">
+      <br>
+      
+      <button type="submit" class="back-button">Update</button>
+      
+    </form>
+    

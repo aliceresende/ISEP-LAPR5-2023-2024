@@ -1,0 +1,15 @@
+<!-- update-robots.component.html -->
+<h1>Update Robot</h1>
+<div>
+    
+    <form #robotForm="ngForm" (ngSubmit)="updateRobot(robotForm)">
+      <div class="form-group">
+        <label for="id">Robot ID:</label>
+        <select id="id" [(ngModel)]="id" name="id">
+          <option *ngFor="let robot of robots" [value]="robot.id">{{robot.code}}</option>
+       </select>
+      </div>
+      <button type="submit" class="button">Update Robot</button>
+      <button type="button" class="button" (click)="goBack()">Go Back</button>
+    </form>
+  </div>

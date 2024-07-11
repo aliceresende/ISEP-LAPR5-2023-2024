@@ -1,0 +1,14 @@
+:root {
+    --primary: #AB7442;
+    --light: #F5F5F5;
+    --dark: #353535;
+  }
+button{
+  padding: auto;
+  margin: auto;
+  width: 130px;
+  height: 80px;
+  background: #AB7442;
+  color: #F5F5F5;
+  
+}

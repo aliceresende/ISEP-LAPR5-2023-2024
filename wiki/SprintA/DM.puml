@@ -1,0 +1,53 @@
+@startuml
+hide methods
+skinparam classAttributeIconSize 0
+
+
+
+class Elevador{
+}
+
+class Edíficio {
+    -código
+    '- (max 5 chars, letras, digitos, espaços)
+    -nome
+    '- opcional, max 50 chars alfanumericos
+    -descricao
+    -dimensaoPiso
+}
+
+class Piso{
+    - descricao
+    - codigo
+}
+
+class Sala{
+    -categoria
+    -nome
+    -descricao
+}
+
+class Mapa{
+    - tamanho
+}
+
+class Tarefa{
+    - tipoDeTarefa
+}
+class Robot{
+    '- unico
+    -numeroserie
+    -codigo
+    -nickname
+    -
+}
+
+class User{
+}
+
+
+'================================================
+
+
+
+@enduml

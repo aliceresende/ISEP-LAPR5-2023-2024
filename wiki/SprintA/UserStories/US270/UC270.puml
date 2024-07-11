@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+
+User -> (Cria elevador em edifício)
+
+
+@enduml

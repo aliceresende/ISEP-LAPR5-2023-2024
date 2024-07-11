@@ -1,0 +1,46 @@
+/* Styles for the table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Header row styles */
+.table th {
+  background-color: #3498db;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Body row styles */
+.table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+/* Alternating row colors */
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Button styles */
+button {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: #27ae60;
+}
+
+/* Container styles (optional) */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}

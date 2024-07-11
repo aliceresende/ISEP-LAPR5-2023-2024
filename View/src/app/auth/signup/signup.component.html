@@ -1,0 +1,47 @@
+<div id="login-form-wrap">
+    <div class="icon">
+        <img src="../../../assets/user.png" alt="User Icon">
+    </div>
+    <form id="login-form" #userForm="ngForm" (ngSubmit)="createUser(userForm)">
+        <p>
+            <input type="text" id="firstName" name="firstName"  [(ngModel)]="firstName" placeholder="First Name" required><i
+                class="validation"><span></span><span></span></i>
+        </p>
+
+        <p>
+            <input type="text" id="lastName" name="lastName" [(ngModel)]="lastName" placeholder="Last Name" required><i
+                class="validation"><span></span><span></span></i>
+        </p>
+        
+        <p>
+            <input type="text" id="phone" name="phone" [(ngModel)]="phone" placeholder="Phone" required><i
+                class="validation"><span></span><span></span></i>
+        </p>
+        <p>
+            <input type="email" id="email" name="email" [(ngModel)]="email" placeholder="Email" required><i
+                class="validation"><span></span><span></span></i>
+        </p>
+        <p>
+            <input type="password" id="password" name="password" [(ngModel)]="password" placeholder="Password" required><i
+                class="validation"><span></span><span></span></i>
+        </p>
+        <p>
+            <input type="number" id="taxPayerNumber" name="taxPayerNumber" [(ngModel)]="taxPayerNumber" placeholder="taxPayerNumber" required><i
+                class="validation"><span></span><span></span></i>
+        </p>
+      <br>
+        <label>
+            <input class="real-checkbox" type="checkbox" id="privacyPolicy" name="privacyPolicy" [(ngModel)]="privacyPolicy" #privacyPolicyCtrl="ngModel" required>
+            <span class="custom-checkbox"></span>
+            Eu li e concordo com a <a (click)="openPrivacyPolicy()">Política de Privacidade. </a>
+        </label>
+      
+        <p>
+        <input type="submit" id="login" value="Register Now">
+        </p>
+    </form>
+    <div id="create-account-wrap">
+        <p>If already have an account click <a routerLink="/auth/signin">here</a>
+        <p>
+    </div>
+</div>

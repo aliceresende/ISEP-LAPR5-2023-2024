@@ -1,0 +1,41 @@
+<!-- get-task-by-user.component.html -->
+
+<div>
+    <label for="userEmail">Email:</label>
+    <input id="userEmail" [(ngModel)]="email" placeholder="Digite o e-mail">
+  </div>
+  
+  <div>
+    <label for="taskState">Status:</label>
+    <input id="taskState" [(ngModel)]="state" placeholder="Digite o estado da tarefa">
+  </div>
+  
+  <button (click)="getTaskByUser(email,state)">Search for Task</button>
+  
+  <h2>Tasks from {{ email }} - Status: {{ state }}</h2>
+  
+  <!-- Pick and Deliver Tasks -->
+  <div *ngIf="pickDeliver.length > 0">
+    <h3>Pick and Deliver Tasks</h3>
+    <ul>
+      <li *ngFor="let task of pickDeliver">
+        <span><p><b>Name Deliver:</b> {{ task.nameDeliver }}</p></span>
+        <span><p><b>Name Pick:</b> {{ task.namePick }}</p></span>
+        <span><p><b>Room Deliver:</b> {{ task.roomDeliver }}</p></span>
+        <span><p><b>Room Pick:</b> {{ task.roomPick }}</p></span>
+        <br>
+    </li>
+    </ul>
+  </div>
+  
+  <!-- Vigilance Tasks -->
+  <div *ngIf="vigilance.length > 0">
+    <h3>Vigilance Tasks</h3>
+    <ul>
+      <li *ngFor="let task of vigilance">
+        <span><p><b>Ending Point:</b> {{ task.endingPoint }}</p></span>
+        <span><p><b>Starting Point:</b> {{ task.startingPoint }}</p></span>
+        <br>
+    </li>
+    </ul>
+  </div>

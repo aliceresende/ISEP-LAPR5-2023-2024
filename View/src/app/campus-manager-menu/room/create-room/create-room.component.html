@@ -1,0 +1,40 @@
+<h1>Create Room Form</h1>
+<form [formGroup]="checkoutForm">
+  <div>
+    <label for="floor">Room floor:</label>
+    <input id="floor" type="text" formControlName="floor" #floor>
+  </div>
+
+  <div>
+    <label for="name">Room name:</label>
+    <input id="name" type="text" formControlName="name" #name>
+  </div>
+
+  <div>
+    <label for="xDimension">X dimension:</label>
+    <input id="xDimension" type="number" formControlName="xDimension" #xDimension>
+  </div>
+
+  <div>
+    <label for="yDimension">Y dimension:</label>
+    <input id="yDimension" type="number" formControlName="yDimension" #yDimension>
+  </div>
+
+  <div>
+    <label for="roomType">Room Type:</label>
+    <input id="roomType" type="text" formControlName="roomType" #roomType>
+  </div>
+
+  <div>
+    <label for="description">Description:</label>
+    <input id="description" type="text" formControlName="description" #description>
+  </div>
+
+
+
+  <button class="add-button" type="button" (click)="add(floor.value,name.value,xDimension.valueAsNumber, yDimension.valueAsNumber , roomType.value,description.value);">
+    Create Building
+  </button>
+</form>
+
+

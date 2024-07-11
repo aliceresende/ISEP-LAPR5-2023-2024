@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+
+User -> (Cria passagem entre edifícios)
+
+
+@enduml

@@ -1,0 +1,57 @@
+/* Your styles for the component */
+
+h1 {
+  padding-top: 5%;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #AB7442;
+  color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Apply a consistent background color for all even rows */
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* Apply a consistent background color for all odd rows */
+}
+
+.center-container {
+  text-align: center;
+}
+
+.back-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: #100f0f;
+  background-color: #fff;
+}
+
+.back-button:hover {
+  background-color: #AB7442;
+}
+
+  

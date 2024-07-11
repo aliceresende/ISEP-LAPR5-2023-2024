@@ -1,0 +1,18 @@
+
+<h1>List Floors</h1>
+<form id="floors-form" #simpleForm="ngForm">
+  <label for="buildingId">Select Building:</label>
+  <select id="buildingId" [(ngModel)]="buildingID" name="buildingID">
+ <option *ngFor="let building of buildings" [value]="building.id">{{ building.name }}</option>
+</select>
+  
+  <ul class="floors">
+    <li *ngFor="let floor of floors">
+        <span><p><b>Floor Number:</b> {{ floor.floorNumber }}</p></span>
+        <span><b>Description:</b> {{ floor.description }}<br></span>
+        <br>
+    </li>
+  </ul>
+  <button (click)="getFloorsByBuilding(buildingID)" class="add-button">Search</button>
+</form>
+  

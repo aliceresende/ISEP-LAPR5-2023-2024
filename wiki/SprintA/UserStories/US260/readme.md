@@ -1,0 +1,45 @@
+# US 260 - Listar passagens entre 2 edificios
+=================================================================
+
+# Design Arquitetural
+
+## Nível 1
+
+### Nível 1 - Vista Lógica
+
+![N1VL.png](..%2F..%2FNivel1%2FN1VL.png)
+
+## Nível 1 - Vista de Processo
+
+![N1 Vista Processo](N1VP.png )
+
+## Nível 2
+
+## Nível 2 - Vista Lógica
+
+![N2VL.png](..%2F..%2FNivel2%2FN2VL.png)
+
+## Nível 2 - Vista de Implementação
+
+![N2VI.png](..%2F..%2FNivel2%2FN2VI.png)
+
+
+## Nível 3 (Master Data Rede)
+
+## Nível 3 - Vista Lógica
+![N3VL.png](..%2F..%2FNivel3%2FN3VL.png)
+
+
+## Nível 3 - Vista de Processo
+![N3VP - LIST.png](..%2F..%2FNivel3%2FN3VP%20-%20LIST.png)
+### Nesta vista de implementação o X representa Passagem, sendo que vão ser usados dois repos,
+### o repo da Passagem e do Floor
+
+## Nível 3 - Vista de Implementação
+![N3VI.png](..%2F..%2FNivel3%2FN3VI.png)
+
+
+
+
+
+

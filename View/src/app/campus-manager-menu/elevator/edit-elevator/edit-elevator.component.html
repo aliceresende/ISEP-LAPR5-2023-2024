@@ -1,0 +1,50 @@
+<h1>Update Elevator Form</h1>
+<form id="elevators-form" #simpleForm="ngForm" (ngSubmit)="updateElevator(simpleForm)">
+
+  <label for="elevatorId">Elevator:</label>
+  <select id="elevatorId" [(ngModel)]="id" name="id">
+    <option *ngFor="let elevator of elevators" [value]="elevator.id">{{ elevator.model }}</option>
+  </select>
+
+  <label for="buildingId">Building:</label>
+  <select id="buildingId" [(ngModel)]="elevatorBuilding" name="elevatorBuilding">
+    <option *ngFor="let building of buildings" [value]="building.id">{{ building.name }}</option>
+  </select>
+
+  <label for="elevatorFloors">Floors(press CRTL while clicking to choose more then one):</label>
+  <select id="elevatorFloors" [(ngModel)]="elevatorFloors" name="elevatorFloors" multiple required>
+    <option *ngFor="let floor of availableFloors" [value]="floor.id">{{ floor.description }}</option>
+  </select>
+
+  <label for="elevatorBrand"> Brand:</label>
+  <input type="text" id="elevatorBrand" [(ngModel)]="elevatorBrand" name="elevatorBrand">
+  <br>
+
+  <label for="elevatorModel">Model:</label>
+  <input type="text" id="elevatorModel" [(ngModel)]="elevatorModel" name="elevatorModel" required>
+  <br>
+
+  <label for="elevatorSeriesNumber">Series number:</label>
+  <input type="text" id="elevatorSeriesNumber" [(ngModel)]="elevatorSeriesNumber" name="elevatorSeriesNumber" required>
+  <br>
+
+  <label for="elevatorDescription">Description:</label>
+  <input type="text" id="elevatorDescription" [(ngModel)]="elevatorDescription" name="elevatorDescription" required>
+  <br>
+
+  <label for="elevatorX">X:</label>
+  <input type="text" id="elevatorX" [(ngModel)]="elevatorX" name="elevatorX" required>
+  <br>
+
+  <label for="elevatorY">Y:</label>
+  <input type="text" id="elevatorY" [(ngModel)]="elevatorY" name="elevatorY" required>
+  <br>
+
+  <label for="elevatorLocation">Location:</label>
+  <input type="text" id="elevatorLocation" [(ngModel)]="elevatorLocation" name="elevatorLocation" required>
+  <br>
+
+  <button type="submit" class="back-button">Update</button>
+
+</form>
+

@@ -1,0 +1,34 @@
+<h1>Update Building Form</h1>
+<form id="building-form" #simpleForm="ngForm" (ngSubmit)="updateBuilding(simpleForm)">
+  
+  
+  <label for="buildingId">Building:</label>
+  <select id="buildingId" [(ngModel)]="id" name="id">
+ <option *ngFor="let building of buildings" [value]="building.id">{{ building.name }}</option>
+</select>
+
+      <label for="name">name:</label>
+      <input type="text" id="name" [(ngModel)]="name" name="name" placeholder="Ex: Building B">
+      <br>  
+
+    <label for="code">Builing code:</label>
+    <input type="text" id="code" [(ngModel)]="code" name="code"  placeholder="B" >
+    <br>
+  
+    
+
+      <label for="description">Description:</label>
+      <input type="text" id="description" [(ngModel)]="description" name="description" placeholder="Ex: Building C">
+      <br>
+
+      <label for="x">x:</label>
+      <input type="text" id="x" [(ngModel)]="x" name="x" placeholder="Ex:10">
+      <br>
+
+      <label for="y">x:</label>
+      <input type="text" id="y" [(ngModel)]="y" name="y" placeholder="Ex:10">
+      <br>
+      
+      <button type="submit" class="back-button">Update</button>
+      
+    </form>

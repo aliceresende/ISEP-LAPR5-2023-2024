@@ -1,0 +1,37 @@
+
+  <h1>Update Passages Form</h1>
+<form id="passage-form" #simpleForm="ngForm" (ngSubmit)="createPassage(simpleForm)">
+  <div class="form-group">
+    <mat-form-field>
+      <mat-label>Passage Code</mat-label>
+      <select matNativeControl [(ngModel)]="selectedPassage" name="selectedPassage">
+        <ng-container *ngFor="let passage of passages">
+          <option [ngValue]="passage">{{passage.passageCode}}</option>
+        </ng-container>
+      </select>
+      
+    </mat-form-field>
+  </div>
+  <label for="passageBuilding1Id">Floor Building 1:</label>
+    <select id="passageBuilding1Id" [(ngModel)]="floorBuilding1" name="floorBuilding1">
+      <option *ngFor="let floor of floors" [value]="floor.id">{{floor.description}}</option>
+   </select>
+    <br>
+    
+    <label for="passageBuilding2Id">Floor Building 2:</label>
+    <select id="passageBuilding2Id" [(ngModel)]="floorBuilding2" name="floorBuilding2">
+      <option *ngFor="let floor of floors" [value]="floor.id">{{floor.description}}</option>
+   </select>
+    <br>
+  
+  <label for="location">Location:</label>
+  <input type="text" id="location" [(ngModel)]="location" name="location">
+  <br>
+  
+  <input type="hidden" [(ngModel)]="passageCode" name="hiddenPassageCode">
+  
+  <button type="submit" class="button-1">Update</button>
+  
+  <button (click)="goBack()" class="button-24" id="back">Go Back</button>
+  </form>
+  

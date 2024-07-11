@@ -1,0 +1,23 @@
+{
+    "groundTextureUrl": "./textures/newGround.jpg",
+    "wallTextureUrl": "./textures/yellowWall.jpg",
+    "doorTextureUrl": "./textures/door_original.jpg",
+    "elevatorTextureUrl": "./textures/elevator.webp",
+    "floorCode": "Andar 2 Edifício A",
+    "buildingCode":"A",
+    "size": { "width": 10, "height": 10 },
+    "map": [
+        [3, 2, 2, 2, 3, 2, 3, 2, 2, 2, 1],
+        [1, 0, 0,0, 1, 0, 1, 0, 0, 0, 1],
+        [1, 0, 0, 0, "poW", 0, "poW", 0, 0, 0, 1],
+        [1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1],
+        [3, 2, 2, 2, 0, 0, 2, 2, 2, 2, "elW"],
+        [1, 0, 0, 0, 3,"poN", 2, 2, 1, 0, 1],
+        [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1],
+        [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1],
+        [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1],
+        [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0]
+    ]
+    
+}

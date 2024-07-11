@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+left to right direction
+
+:User: as User
+:Gestor de frota: as frota
+
+'-----------------
+User --> (Criar Edifício - us150)
+User --> (Editar Edifício - us160)
+User -> (Listar Edífício - us170)
+User -> (Lista Edifícios com min e max pisos - us180)
+User -> (Criar Piso de edifício - us190)
+User -> (Editar informação do piso do edifício - us200)
+User -> (Listar todos os pisos de um edifício - us210)
+User -> (Listar pisos de edifício com passagem para outros edifícios - us220)
+User -> (Carregar Mapa de piso - us230)
+User -> (Criar passagem entre edifícios - us240)
+User -> (Editar passagem entre edifícios - us250)
+User -> (Listar passagens entre 2 edifícios - us260)
+User -> (Criar elevador em edifício - us 270)
+User -> (Editar elevador em edifício - us280)
+User -> (Listar elevadores em edifício - us290)
+User -> (Criar sala de piso de edifício - us310)
+
+frota -> (Adicionar um novo tipo de robot - us350 \n [indicando a sua designação e que tipos de tarefas pode executar da lista prédefinida de tarefas])
+frota -> (Adicionar um novo robot à frota - us360)
+frota -> (Inibir um robot - us370)
+frota -> (Listar todos os robots da frota - us380)
+
+@enduml

@@ -1,0 +1,29 @@
+<h1>Create Robot Type Form</h1>
+<form id="floors-form" #simpleForm="ngForm" (ngSubmit)="createRobotType(simpleForm)">
+
+    <label for="robotType">Robot Type:</label>
+    <input type="text" id="robotType" [(ngModel)]="robotType" name="robotType" placeholder="Ex: Robot PickUp&Delivery">
+    <br>
+  
+      <label for="brand">Brand:</label>
+      <input type="text" id="brand" [(ngModel)]="brand" name="brand" placeholder="Apple">
+      <br>
+
+      <label for="model">Model:</label>
+      <input type="text" id="model" [(ngModel)]="model" name="model" placeholder="A1">
+      <br>
+
+    <div class="form-group custom-select">
+        <label for="typeOfTasks">Type Of Tasks:</label>
+        <select id="typeOfTasks" name="typeOfTasks" [(ngModel)]="typeOfTasks" (change)="typeOfTaskChanged()" required>
+          <option value="pickupdelivery">Pickup and Delivery</option>
+          <option value="vigilancia">Vigilância</option>
+          <option value="ambas">Ambas</option>
+        </select>
+      </div>
+      
+
+  
+      <button type="submit" class="back-button">Create</button>
+      
+    </form>

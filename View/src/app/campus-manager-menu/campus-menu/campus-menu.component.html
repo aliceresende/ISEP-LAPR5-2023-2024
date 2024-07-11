@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary">RobDroneGo</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <div class="nav-item dropdown">
+              <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Buildings</a>
+              <div class="dropdown-menu fade-up m-0">
+                  <a routerLink="buildings/create" class="dropdown-item">Create</a>
+                  <a routerLink="buildings/update" class="dropdown-item">Update Buildings</a>
+                  <a routerLink="buildings/list" class="dropdown-item">List Buildings</a>
+                  <a routerLink="buildings/listMinMax" class="dropdown-item">List Buildings By Min Max</a>
+              </div>
+          </div>
+          <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Passages</a>
+              <div class="dropdown-menu fade-up m-0">
+                  <a routerLink="passages/create" class="dropdown-item">Create</a>
+                  <a routerLink="passages/update" class="dropdown-item">Update</a>
+                  <a routerLink="passages/list" class="dropdown-item">List Passages</a>
+              </div>
+          </div>
+          <div class="nav-item dropdown">
+              <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Elevators</a>
+              <div class="dropdown-menu fade-up m-0">
+                  <a routerLink="elevators/create" class="dropdown-item">Create</a>
+                  <a routerLink="elevators/editElevators" class="dropdown-item">Update</a>
+                  <a routerLink="elevators/listElevators" class="dropdown-item">List Elevators</a>
+              </div>
+          </div>
+            <div class="nav-item dropdown">
+              <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Floors</a>
+              <div class="dropdown-menu fade-up m-0">
+                  <a routerLink="floors/create" class="dropdown-item">Create</a>
+                  <a routerLink="floors/update" class="dropdown-item">Update</a>
+                  <a routerLink="floors/list" class="dropdown-item">List Floors By Building</a>
+                  <a routerLink="floors/open" class="dropdown-item">Open Floor</a>
+                  <a routerLink="floors/open_automatic" class="dropdown-item">Open Automatic Floor</a>
+              </div>
+          </div>
+          <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Rooms</a>
+              <div class="dropdown-menu fade-up m-0">
+                  <a routerLink="rooms/create" class="dropdown-item">Create</a>
+              </div>
+          </div>
+
+        </div>
+    </div>
+    <a routerLink="/auth/signin"><button type="button">LOGOUT <i class="fas fa-sign-out-alt"></i></button></a>
+</nav>
+
+
+<div class="container-fluid p-0 pb-5">
+    <div class="owl-carousel header-carousel position-relative">
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="../../../assets/mapa.jpeg" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+              <router-outlet></router-outlet>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+

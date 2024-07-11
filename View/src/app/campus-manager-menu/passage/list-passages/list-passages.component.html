@@ -1,0 +1,22 @@
+<h1>{{title}}</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Location</th>
+        <th>Floor Building 1</th>
+        <th>Floor Building 2</th>
+        <th>Passage Code</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let passage of passages">
+        <td>{{passage.location}}</td>
+        <td>{{passage.floorBuilding1}}</td>
+        <td>{{passage.floorBuilding2}}</td>
+        <td>{{passage.passageCode}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="center-container">
+    <button (click)="goBack()" class="back-button">Go Back</button>
+  </div>
